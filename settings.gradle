@@ -1,0 +1,3 @@
+// The name of the project (shown in the Gradle panel in VS Code).
+// Change it when you copy this folder for a new project.
+rootProject.name = 'javafx-project'

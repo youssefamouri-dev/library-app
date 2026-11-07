@@ -1,0 +1,28 @@
+/* JavaFX CSS: like web CSS, but properties start with -fx- */
+
+.root {
+    -fx-background-color: #f4f6fb;
+    -fx-font-size: 14px;
+    -fx-padding: 20;
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2b4c7e;
+}
+
+.button {
+    -fx-background-color: #2b4c7e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #3d64a0;
+}
+
+.text-field {
+    -fx-pref-width: 220;
+}

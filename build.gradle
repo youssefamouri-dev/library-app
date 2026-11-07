@@ -1,0 +1,29 @@
+// build.gradle = the Gradle configuration file (same job as Maven's pom.xml).
+// JavaFX is NOT included in the JDK since Java 11, so Gradle downloads it for us.
+
+plugins {
+    id 'application'                                   // gives us the "run" task
+    id 'org.openjfx.javafxplugin' version '0.1.0'      // makes JavaFX setup easy
+}
+
+repositories {
+    mavenCentral()                                     // where libraries are downloaded from
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21                               // compile for Java 21
+    options.encoding = 'UTF-8'
+}
+
+javafx {
+    version = '21.0.5'
+    // javafx.controls = buttons, labels, text fields, lists...
+    // javafx.fxml     = lets you describe the UI in .fxml files (used by Scene Builder)
+    // Other modules you can add: 'javafx.media', 'javafx.web', 'javafx.swing'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+application {
+    mainModule = 'app'                                 // name written in module-info.java
+    mainClass = 'app.MainApp'                          // package.ClassName of the class with main()
+}
